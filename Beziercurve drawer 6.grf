@@ -1,0 +1,267 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.3.0.384
+MinVersion = 2.5
+OS = Windows NT 6.1 
+
+[Axes]
+xMin = -8.85224274406332
+xMax = 11.1477572559367
+xTickUnit = 1
+xGridUnit = 1
+yMin = -3.12005277044855
+yMax = 9.00395778364116
+yTickUnit = 1
+yGridUnit = 1
+AxesColor = clBlue
+GridColor = 0x00FF9999
+ShowLegend = 1
+Radian = 1
+AxesStyle = 0
+
+[PointSeries1]
+FillColor = clBlue
+LineColor = clBlue
+Size = 2
+Style = 0
+LineStyle = 0
+LabelPosition = 1
+Points = px0,py0;px1,py1;px2,py2;px3,py3;px4,py4;px5,py5;
+LegendText = Controlpoints
+
+[PointSeries2]
+FillColor = clRed
+LineColor = clRed
+Size = 2
+Style = 0
+LineStyle = 0
+LabelPosition = 1
+Points = Bx0,By0;Bx1,By1;Bx2,By2;Bx3,By3;Bx4,By4;
+LegendText = Lines of first degree
+
+[PointSeries3]
+FillColor = clLime
+LineColor = clLime
+Size = 2
+Style = 0
+LineStyle = 0
+LabelPosition = 1
+Points = Bx5,By5;Bx6,By6;Bx7,By7;Bx8,By8;
+LegendText = Lines of second degree
+
+[PointSeries4]
+FillColor = clGray
+LineColor = clGray
+Size = 2
+Style = 0
+LineStyle = 0
+LabelPosition = 1
+Points = Bx9,By9;Bx10,By10;Bx11,By11;
+LegendText = Lines of third degree
+
+[PointSeries5]
+FillColor = clFuchsia
+LineColor = clFuchsia
+Size = 2
+Style = 0
+LineStyle = 0
+LabelPosition = 1
+Points = Bx12,By12;Bx13,By13;
+LegendText = Lines of fourth degree
+
+[PointSeries6]
+FillColor = clBlack
+LineColor = clBlack
+Size = 2
+Style = 0
+LineStyle = 0
+LabelPosition = 1
+Points = Bx14,By14;
+LegendText = Moving point
+
+[Func1]
+FuncType = 1
+x = B14h(t)
+y = B14v(t)
+LegendText = Curve
+From = 0
+To = x0
+Steps = 1000
+Color = clBlack
+
+[Data]
+TextLabelCount = 0
+FuncCount = 1
+PointSeriesCount = 6
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+
+[CustomFunctions]
+g(t) = B14h(t)
+f(t) = B14v(t)
+MMMMMMMMMMMMMMMMM0 = 0
+x0 = .75
+MMMMMMMMMMMMMMMMM8 = 0
+px0 = 4
+px1 = 1
+px2 = 2
+px3 = 3
+px4 = 0.5
+px5 = 2.4
+MMMMMMMMMMMMM7 = 0
+py0 = 5
+py1 = 0
+py2 = 6
+py3 = 1
+py4 = 4
+py5 = 2.5
+MMMMMMMMMM1 = 0
+Bx0 = (1-x0)px0+x0*px1
+Bx1 = (1-x0)px1+x0*px2
+Bx2 = (1-x0)px2+x0*px3
+Bx3 = (1-x0)px3+x0*px4
+Bx4 = (1-x0)px4+x0*px5
+MMMMMMMMMM2 = 0
+By0 = (1-x0)py0+x0*py1
+By1 = (1-x0)py1+x0*py2
+By2 = (1-x0)py2+x0*py3
+By3 = (1-x0)py3+x0*py4
+By4 = (1-x0)py4+x0*py5
+MMMMMMMMMM3 = 0
+Bx5 = (1-x0)Bx0+x0*Bx1
+Bx6 = (1-x0)Bx1+x0*Bx2
+Bx7 = (1-x0)Bx2+x0*Bx3
+Bx8 = (1-x0)Bx3+x0*Bx4
+MMMMMMMMMM4 = 0
+By5 = (1-x0)By0+x0*By1
+By6 = (1-x0)By1+x0*By2
+By7 = (1-x0)By2+x0*By3
+By8 = (1-x0)By3+x0*By4
+MMMMMMMMMM5 = 0
+Bx9 = (1-x0)Bx5+x0*Bx6
+Bx10 = (1-x0)Bx6+x0*Bx7
+Bx11 = (1-x0)Bx7+x0*Bx8
+MMMMMMMMMMMMMMMMMMMM6 = 0
+By9 = (1-x0)By5+x0*By6
+By10 = (1-x0)By6+x0*By7
+By11 = (1-x0)By7+x0*By8
+MMMMMMMMMM9 = 0
+Bx12 = (1-x0)Bx9+x0*Bx10
+Bx13 = (1-x0)Bx10+x0*Bx11
+MMMMMMMMMMMMMMMMMMMM10 = 0
+By12 = (1-x0)By9+x0*By10
+By13 = (1-x0)By10+x0*By11
+MMMMMMMMMMMMMMMMMMMM11 = 0
+Bx14 = (1-x0)Bx12+x0*Bx13
+By14 = (1-x0)By12+x0*By13
+MMMMMMMMMM12 = 0
+B0h(t) = (1-t)px0+t*px1
+B1h(t) = (1-t)px1+t*px2
+B2h(t) = (1-t)px2+t*px3
+B3h(t) = (1-t)px3+t*px4
+B4h(t) = (1-t)px4+t*px5
+MMMMMMMMMM13 = 0
+B0v(t) = (1-t)py0+t*py1
+B1v(t) = (1-t)py1+t*py2
+B2v(t) = (1-t)py2+t*py3
+B3v(t) = (1-t)py3+t*py4
+B4v(t) = (1-t)py4+t*py5
+MMMMMMMMMM14 = 0
+B5h(t) = (1-t)B0h(t)+t*B1h(t)
+B6h(t) = (1-t)B1h(t)+t*B2h(t)
+B7h(t) = (1-t)B2h(t)+t*B3h(t)
+B8h(t) = (1-t)B3h(t)+t*B4h(t)
+MMMMMMMMMM15 = 0
+B5v(t) = (1-t)B0v(t)+t*B1v(t)
+B6v(t) = (1-t)B1v(t)+t*B2v(t)
+B7v(t) = (1-t)B2v(t)+t*B3v(t)
+B8v(t) = (1-t)B3v(t)+t*B4v(t)
+MMMMMMMMMM16 = 0
+B9h(t) = (1-t)B5h(t)+t*B6h(t)
+B10h(t) = (1-t)B6h(t)+t*B7h(t)
+B11h(t) = (1-t)B7h(t)+t*B8h(t)
+MMMMMMMMMMMMMMMMMMMM17 = 0
+B9v(t) = (1-t)B5v(t)+t*B6v(t)
+B10v(t) = (1-t)B6v(t)+t*B7v(t)
+B11v(t) = (1-t)B7v(t)+t*B8v(t)
+MMMMMMMMMM18 = 0
+B12h(t) = (1-t)B9h(t)+t*B10h(t)
+B13h(t) = (1-t)B10h(t)+t*B11h(t)
+MMMMMMMMMMMMMMMMMMMM119 = 0
+B12v(t) = (1-t)B9v(t)+t*B10v(t)
+B13v(t) = (1-t)B10v(t)+t*B11v(t)
+MMMMMMMMMMMMMMMMMMMM20 = 0
+B14h(t) = (1-t)B12h(t)+t*B13h(t)
+MMMMMMMMMMMMMMMMMMMM21 = 0
+B14v(t) = (1-t)B12v(t)+t*B13v(t)
+
+[Animate]
+Constant = x0
+%Bx0 = 0.275;27.5;3.025
+%Bx1 = 0.375;37.5;4.125
+%Bx10 = 0.6515625;65.15625;7.1671875
+%Bx11 = 0.765625;76.5625;8.421875
+%Bx12 = 0.60546875;60.546875;6.66015625
+%Bx13 = 0.737109375;73.7109375;8.108203125
+%Bx14 = 0.70419921875;70.419921875;7.74619140625
+%Bx2 = 0.55;55;6.05
+%Bx3 = 0.75;75;8.25
+%Bx4 = 0.8;80;8.8
+%Bx5 = 0.35;35;3.85
+%Bx6 = 0.50625;50.625;5.56875
+%Bx7 = 0.7;70;7.7
+%Bx8 = 0.7875;78.75;8.6625
+%Bx9 = 0.4671875;46.71875;5.1390625
+%By0 = 0.2;20;2.2
+%By1 = 0.275;27.5;3.025
+%By10 = 0.340625;34.0625;3.746875
+%By11 = 0.271875;27.1875;2.990625
+%By12 = 0.337109375;33.7109375;3.708203125
+%By13 = 0.2890625;28.90625;3.1796875
+%By14 = 0.30107421875;30.107421875;3.31181640625
+%By2 = 0.375;37.5;4.125
+%By3 = 0.325;32.5;3.575
+%By4 = 0.225;22.5;2.475
+%By5 = 0.25625;25.625;2.81875
+%By6 = 0.35;35;3.85
+%By7 = 0.3375;33.75;3.7125
+%By8 = 0.25;25;2.75
+%By9 = 0.3265625;32.65625;3.5921875
+%MMMMMMMMMM1 = 10;10;0
+%MMMMMMMMMM12 = 10;10;0
+%MMMMMMMMMM13 = 10;10;0
+%MMMMMMMMMM14 = 10;10;0
+%MMMMMMMMMM15 = 10;10;0
+%MMMMMMMMMM16 = 10;10;0
+%MMMMMMMMMM18 = 10;10;0
+%MMMMMMMMMM2 = 10;10;0
+%MMMMMMMMMM3 = 10;10;0
+%MMMMMMMMMM4 = 10;10;0
+%MMMMMMMMMM5 = 10;10;0
+%MMMMMMMMMM9 = 10;10;0
+%MMMMMMMMMMMMM7 = 10;10;0
+%MMMMMMMMMMMMMMMMM0 = 10;10;0
+%MMMMMMMMMMMMMMMMM8 = 10;10;0
+%MMMMMMMMMMMMMMMMMMMM10 = 10;10;0
+%MMMMMMMMMMMMMMMMMMMM11 = 10;10;0
+%MMMMMMMMMMMMMMMMMMMM119 = 10;10;0
+%MMMMMMMMMMMMMMMMMMMM17 = 10;10;0
+%MMMMMMMMMMMMMMMMMMMM20 = 10;10;0
+%MMMMMMMMMMMMMMMMMMMM21 = 10;10;0
+%MMMMMMMMMMMMMMMMMMMM6 = 10;10;0
+%px0 = 0.2;20;2.2
+%px1 = 0.3;30;3.3
+%px2 = 0.4;40;4.4
+%px3 = 0.6;60;6.6
+%px4 = 0.8;80;8.8
+%px5 = 0.8;80;8.8
+%py0 = 0.2;20;2.2
+%py1 = 0.2;20;2.2
+%py2 = 0.3;30;3.3
+%py3 = 0.4;40;4.4
+%py4 = 0.3;30;3.3
+%py5 = 0.2;20;2.2
+%x0 = 0;1;0.015625
+

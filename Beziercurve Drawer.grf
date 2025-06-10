@@ -1,0 +1,120 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.4.0.486
+MinVersion = 2.5
+OS = Windows NT 6.1 
+
+[Axes]
+xMin = 0.333284326911728
+xMax = 3.66872066684504
+xTickUnit = 0.2
+xGridUnit = 0.2
+yMin = 2.92235498605427
+yMax = 5.02680260894301
+yTickUnit = 0.2
+yGridUnit = 0.2
+AxesColor = clBlue
+GridColor = 0x00FF9999
+ShowLegend = 1
+Radian = 1
+AxesStyle = 0
+
+[PointSeries1]
+FillColor = clBlue
+LineColor = clBlue
+Size = 2
+Style = 0
+LineStyle = 0
+LabelPosition = 1
+Points = px0,py0;px1,py1;px2,py2;
+LegendText = Controlpoints
+
+[PointSeries2]
+FillColor = clBlue
+LineColor = clBlue
+Size = 2
+Style = 0
+LineStyle = 0
+LabelPosition = 1
+Points = bv0,bh0;bv1,bh1;
+LegendText = moving line
+
+[PointSeries3]
+FillColor = clBlue
+LineColor = clBlue
+Size = 2
+Style = 0
+LineStyle = 0
+LabelPosition = 1
+Points = bx,by;
+LegendText = moving point
+
+[Func1]
+FuncType = 1
+x = f(t)
+y = g(t)
+From = 0
+To = x0
+Steps = 1000
+Color = clRed
+
+[Data]
+TextLabelCount = 0
+FuncCount = 1
+PointSeriesCount = 3
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+
+[CustomFunctions]
+px0 = 1
+py0 = 3
+px1 = 2
+py1 = 5
+px2 = 3
+py2 = 3
+x0 = 0.5
+f(t) = (1-t)bx0(t)+t*bx1(t)
+g(t) = (1-t)by0(t)+t*by1(t)
+bx = (1-x0)bv0+x0*bv1
+by = (1-x0)bh0+x0*bh1
+bx0(t) = (1-t)px0+px1*t
+by0(t) = (1-t)py0+py1*t
+bx1(t) = (1-t)px1+px2*t
+by1(t) = (1-t)py1+py2*t
+bv0 = (1-x0)px0+px1*x0
+bh0 = (1-x0)py0+py1*x0
+bv1 = (1-x0)px1+px2*x0
+bh1 = (1-x0)py1+py2*x0
+
+[Animate]
+Constant = x0
+FramesPerSecond = 20
+%a = 0.2;20;2.2
+%b = -1.2;-120;13.2
+%b1x = 0.7;70;7.7
+%b1y = 0.2;20;2.2
+%bh0 = 0.12;12;1.32
+%bh1 = 0.09;9;0.99
+%bv0 = 0.38;38;4.18
+%bv1 = 0.22;22;2.42
+%bx = 0.2;20;2.2
+%bx0 = 0.38;38;4.18
+%bx1 = 0.22;22;2.42
+%by = 0.2;20;2.2
+%by0 = 0.12;12;1.32
+%by1 = 0.09;9;0.99
+%mx = 0.4;40;4.4
+%my = 0.4;40;4.4
+%px0 = 10;10;0
+%px1 = 0.8;80;8.8
+%px2 = 1.2;120;13.2
+%py0 = 10;10;0
+%py1 = 0.4;40;4.4
+%py2 = 10;10;0
+%sx = 0.6;60;6.6
+%sy = 0.2;20;2.2
+%x0 = 0;1;0.015625
+%xa = 0.6;60;6.6
+

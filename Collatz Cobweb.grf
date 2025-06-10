@@ -1,0 +1,102 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.3.0.384
+MinVersion = 2.5
+OS = Windows 98 4.10  A 
+
+[Axes]
+xMin = -28.7551692462976
+xMax = 20.4549662887081
+xTickUnit = 5
+xGridUnit = 2048
+xAutoGrid = 0
+yMin = -29.2992530401014
+yMax = 20.4817195871662
+yTickUnit = 5
+yGridUnit = 128
+yAutoGrid = 0
+AxesColor = clBlue
+GridColor = 0x00FF9999
+ShowLegend = 0
+Radian = 1
+
+[Func1]
+FuncType = 0
+y = x
+Color = clBlack
+
+[Func2]
+FuncType = 0
+y = standard(x)
+Visible = 0
+Color = clMoneyGreen
+
+[Func3]
+FuncType = 1
+x = cobweb(floor(t/2), n)
+y = if(t=0, 0, cobweb(ceil(t/2), n))
+Visible = 0
+From = 0
+To = orbit
+Steps = orbit+1
+Color = clGreen
+DrawType = 2
+
+[Func4]
+FuncType = 1
+x = cobweb(floor(t/2), -n)
+y = if(t=0, 0, cobweb(ceil(t/2), -n))
+Visible = 0
+From = 0
+To = orbit
+Steps = orbit+1
+Color = clGreen
+DrawType = 2
+
+[Func5]
+FuncType = 0
+y = reduced(x)
+Color = clSkyBlue
+
+[Func6]
+FuncType = 1
+x = cobwebr(floor(t/2), n)
+y = if(t=0, 0, cobwebr(ceil(t/2), n))
+From = 0
+To = orbit
+Steps = orbit+1
+Color = clBlue
+DrawType = 2
+
+[Func7]
+FuncType = 1
+x = cobwebr(floor(t/2), -n)
+y = if(t=0, 0, cobwebr(ceil(t/2), -n))
+From = 0
+To = orbit
+Steps = orbit+1
+Color = clBlue
+DrawType = 2
+
+[Data]
+TextLabelCount = 0
+FuncCount = 7
+PointSeriesCount = 0
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+
+[CustomFunctions]
+cobweb(t,x) = if(t<= 0, x, cobweb(t-1, standard(x)))
+cobwebr(t,x) = if(t<= 0, x, cobwebr(t-1, reduced(x)))
+standard(x) = (2 + 7x - (2 + 5x) cos(pi*x) ) /4
+reduced(x) = (1 + 4x - (1 + 2x) cos(pi*x) ) /4
+n = 13
+orbit = 142
+
+[Animate]
+Constant = x0
+%x0 = 5;26;1
+%x1 = 14.2;1420;156.2
+
